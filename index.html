@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Emb Links</title>
 </head>
 <style>
     .container {
@@ -31,12 +33,12 @@
 <body>
     <div class="container">
         <div class="flex-container">
-            <input type="text" id="file-name" placeholder="File" aria-label="file-name" class="form-control">
-            <button id='btn'>Get Runsheet</button>
+            <input class="input" type="text" id="file-name" placeholder="File" aria-label="file-name" class="form-control">
+            <button id='btn' class="btn btn-primary">Get Runsheet</button>
         </div>
         <div class="flex-container">
-            <input type="text" id="file-link" placeholder="Link" aria-label="link-url" class="form-control">
-            <button id='btn2'>Generate Link</button>
+            <input class="input" type="text" id="file-link" placeholder="Link" aria-label="link-url" class="form-control">
+            <button id='btn2' class="btn btn-primary">Generate Link</button>
         </div>
         <div class="flex-container">
             <span id="file-text"></span>
@@ -44,6 +46,7 @@
 
     </div>
 </body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script>
     const fileLink = document.getElementById('file-link')
     const fileName = document.getElementById('file-name')
