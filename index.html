@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 100vw;
+        margin: 15% auto;
+        justify-content: center;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    input {
+        margin: 0 10px;
+    }
+
+    a {
+        font-size: 30px;
+        color: blue;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <input type="text" id="file-name" placeholder="File" aria-label="file-name" class="form-control">
+            <button id='btn'>Get Runsheet</button>
+        </div>
+        <div class="flex-container">
+            <input type="text" id="file-link" placeholder="Link" aria-label="link-url" class="form-control">
+            <button id='btn2'>Generate Link</button>
+        </div>
+        <div class="flex-container">
+            <span id="file-text"></span>
+        </div> 
+
+    </div>
+</body>
+<script>
+    const fileLink = document.getElementById('file-link')
+    const fileName = document.getElementById('file-name')
+    const fileText = document.getElementById('file-text')
+    const btn = document.getElementById('btn')
+    const btn2 = document.getElementById('btn2')
+
+    btn.addEventListener('click', getRunsheet)
+    btn2.addEventListener('click', generateLink)
+    
+    function getRunsheet() {
+        window.open(`https://drive.google.com/drive/search?q=${fileName.value}`, "_blank")
+    }
+
+    function generateLink() {
+        console.log(fileLink.value)
+        fileText.innerHTML = `<a target="_blank" href="${fileLink.value}">${fileName.value}</a>`
+    }
+</script>
+</html>
